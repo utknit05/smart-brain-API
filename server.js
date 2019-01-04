@@ -65,6 +65,6 @@ app.delete('/deleteAccount',(req,res) => {
 //     // res = false
 // });
 
-app.listen(3000, () => {
-	console.log('app is running');
+app.listen(process.env.URL || 3000, () => {
+	console.log(`app is running at ${process.env.URL}`);
 })
